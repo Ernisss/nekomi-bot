@@ -2,6 +2,9 @@ const { Client, Util } = require('discord.js');
 const { TOKEN, PREFIX, GOOGLE_API_KEY } = require('./config');
 const YouTube = require('simple-youtube-api');
 const ytdl = require('ytdl-core');
+const YTDL = require("ytdl-core");
+const Discord = require("discord.js")
+const Request = require('request');
 
 
 const client = new Client({ disableEveryone: true });
@@ -20,6 +23,11 @@ var bot = new Discord.Client();
 		});
 
 console.log("Ready");
+
+client.on("ready", () => {
+	client.user.setGame("#play");
+
+});
 
 client.on('warn', console.warn);
 
