@@ -15,7 +15,7 @@ var Discord = require("discord.js");
 var bot = new Discord.Client();
 
 	bot.on("ready",function(){
-		user.setGame( 'This is the game.' );
+		bot.user.setGame("#play");
 		
 		});
 
