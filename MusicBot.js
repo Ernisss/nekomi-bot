@@ -41,10 +41,13 @@ client.on('message', (message) => {
 		message.channel.sendMessage('#play, #stop, #queue')
 	}
 	
-		if (message.content == '#developer') {
-		message.reply('Bot Developer is TheLightKnight Leader');
+		if (message.content == 'hello') {
+		message.reply('Hey');
 	}
-	
+
+		if (message.content == 'Good Morning @everyone') {
+		message.reply('Morning');
+	}
 });
 
 client.on('error', console.error);
