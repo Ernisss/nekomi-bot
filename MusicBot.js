@@ -42,7 +42,7 @@ client.on('message', (message) => {
 	}
 	
 		if (message.content == '#developer') {
-		message.channel.sendMessage('Bot Developer is TheLightKnight Leader');
+		message.reply('Bot Developer is TheLightKnight Leader');
 	}
 	
 });
