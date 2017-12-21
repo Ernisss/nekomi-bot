@@ -7,6 +7,8 @@ const Discord = require("discord.js")
 const Request = require('request');
 
 var bot = new Discord.Client();
+var discord = require("discord.js");
+
 
 
 const client = new Client({ disableEveryone: true });
@@ -15,19 +17,34 @@ const youtube = new YouTube(GOOGLE_API_KEY);
 
 const queue = new Map();
 
+
 bot.on("ready", function() {
 	console.log("Ready");
 	Bot.user.setGame("!help for help");
 		
 });
 
+
 console.log("Ready");
 
 client.on('warn', console.warn);
 
 client.on("ready", () => {
-	client.user.setGame("#play");
+	client.user.setGame("#help, #developer");
 
+});
+
+client.on('message', (message) => {
+
+	if (message.content == '#help') {
+		//message.reply('#play, #stop, #queue');
+		message.channel.sendMessage('#play, #stop, #queue')
+	}
+	
+		if (message.content == '#developer') {
+		message.channel.sendMessage('Bot Developer is TheLightKnight Leader');
+	}
+	
 });
 
 client.on('error', console.error);
