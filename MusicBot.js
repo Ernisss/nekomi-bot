@@ -40,6 +40,11 @@ client.on('message', (message) => {
 		//message.reply('#play, #stop, #queue');
 		message.channel.sendMessage('#play, #stop, #queue')
 	}
+
+	if (message.content == 'ping') {
+		//message.reply('#play, #stop, #queue');
+		message.channel.sendMessage('pong')
+	}
 	
 		if (message.content == 'hello') {
 		message.reply('Hey');
