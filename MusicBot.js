@@ -20,7 +20,7 @@ const queue = new Map();
 
 bot.on("ready", function() {
 	console.log("Ready");
-	Bot.user.setGame("!help for help");
+	//Bot.user.setGame("!test for test");
 		
 });
 
@@ -48,6 +48,11 @@ client.on('message', (message) => {
 		if (message.content == 'Good Morning @everyone') {
 		message.reply('Morning');
 	}
+
+	if (message.content == 'hey') {
+		message.reply('Hey');
+	}
+
 });
 
 client.on('error', console.error);
