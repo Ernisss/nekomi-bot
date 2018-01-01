@@ -30,7 +30,7 @@ console.log("Ready");
 client.on('warn', console.warn);
 
 client.on("ready", () => {
-	client.user.setGame("#help, #developer");
+	client.user.setGame("#help");
 
 });
 
